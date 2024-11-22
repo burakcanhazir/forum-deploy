@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ../yenidenform  # Backend deposunun bulunduğu klasör yolu
+    ports:
+      - "8080:8080"
+    networks:
+      - forum-network
+
+  frontend:
+    build:
+      context: ../forumfrontend  # Frontend deposunun bulunduğu klasör yolu
+    ports:
+      - "8081:8081"
+    networks:
+      - forum-network
+
+networks:
+  forum-network:

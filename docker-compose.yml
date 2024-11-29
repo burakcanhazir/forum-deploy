@@ -2,10 +2,10 @@ version: "3.9"
 services:
   backend:
     build:
-      context: /home/burak/yenidenform
+      context: /home/burak/forum-backend
       dockerfile: Dockerfile.backend
     volumes:
-      - /home/burak/yenidenform/.env:/app/.env
+      - /home/burak/forum-backend/.env:/app/.env
     container_name: forum-backend
     ports:
       - "8000:8000"
